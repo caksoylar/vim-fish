@@ -5,7 +5,7 @@ endif
 syntax case match
 
 syntax cluster fishCommand contains=NONE
-syntax match fishLineStart "\%(\\\@1<!\%(\\\\\)*\\\n\)\@<!\_^" nextgroup=@fishCommand skipwhite
+syntax match fishLineStart "\%(\\\@1<!\%(\\\\\)*\\\n\)\@1<!\_^" nextgroup=@fishCommand skipwhite
 
 syntax keyword fishKeyword contained
             \ contains_seq delete-or-exit down-or-search
